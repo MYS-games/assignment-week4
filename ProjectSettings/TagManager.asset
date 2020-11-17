@@ -7,6 +7,12 @@ TagManager:
   - Enemy
   - Laser
   - Wall
+  - EnemyShield
+  - RightBorder
+  - LeftBorder
+  - TopBorder
+  - BottomBorder
+  - Ball
   layers:
   - Default
   - TransparentFX
