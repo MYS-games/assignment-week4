@@ -7,6 +7,7 @@ public class ballDetecter : MonoBehaviour
     private GameObject topBorder;
     private GameObject bottomBorder;
     private GameObject basket;
+    private ScoreHandler scoreHandler;
 
     // Start is called before the first frame update
     void Start()
@@ -14,6 +15,7 @@ public class ballDetecter : MonoBehaviour
         topBorder = GameObject.Find("TopInside");
         bottomBorder = GameObject.Find("BottomInside");
         basket = GameObject.Find("Basket");
+        scoreHandler = basket.GetComponent<ScoreHandler>();
     }
 
     // Update is called once per frame
@@ -23,23 +25,22 @@ public class ballDetecter : MonoBehaviour
         {   
             if (Input.GetKeyDown(KeyCode.Z) && transform.name == "red")
             {
-                Debug.Log("Red!!");
-                basket.GetComponent<ScoreHandler>().addPointToScore();
+                // score++
+                scoreHandler.addPointToScore();
+                Destroy(this.gameObject);
             }
             if (Input.GetKeyDown(KeyCode.X) && transform.name == "blue")
             {
                 // score++
-                Debug.Log("blue!!");
-                basket.GetComponent<ScoreHandler>().addPointToScore();
-
+                scoreHandler.addPointToScore();
+                Destroy(this.gameObject);
 
             }
             if (Input.GetKeyDown(KeyCode.C) && transform.name == "yellow")
             {
                 // score++
-                Debug.Log("yellow!!");
-                basket.GetComponent<ScoreHandler>().addPointToScore();
-
+                scoreHandler.addPointToScore();
+                Destroy(this.gameObject);
 
             }
 

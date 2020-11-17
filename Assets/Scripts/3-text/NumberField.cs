@@ -7,12 +7,12 @@ using UnityEngine;
  * This component should be attached to a TextMeshPro object.
  * It allows to feed an integer number to the text field.
  */
-[RequireComponent(typeof(TextMeshPro))]
+[RequireComponent(typeof(TextMeshProUGUI))]
 public class NumberField : MonoBehaviour {
-    private TextMeshPro textField;
+    private TextMeshProUGUI textField;
     private int number;
     void Start()    {
-        textField = GetComponent<TextMeshPro>();
+        textField = GetComponent<TextMeshProUGUI>();
     }
 
     public int GetNumber() {

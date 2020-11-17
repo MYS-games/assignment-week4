@@ -5,14 +5,14 @@ using UnityEngine;
 
 public class ScoreHandler : MonoBehaviour
 {
-    public TextMeshProUGUI scoreText;
-    int score = 0;
+    public NumberField score;
+    int currScore = 0;
     // Start is called before the first frame update
 
     public void addPointToScore()
     {
-        score = int.Parse(scoreText.text);
-        score++;
-        scoreText.SetText(score.ToString());
+        currScore = score.GetNumber();
+        currScore++;
+        score.SetNumber(currScore);
     }
 }
