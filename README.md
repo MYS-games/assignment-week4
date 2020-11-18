@@ -8,7 +8,9 @@
 We chose the sub-section 3, and the original change we add is Astroids that cross the screen horizontally and catches the players laser shots, means that it makes it harder for the player to hit the targets.
 
 The scene: https://github.com/MYS-games/assignment-week4/blob/main/Assets/Scenes/Enemies.unity
+
 ![Astroieds](https://user-images.githubusercontent.com/57191216/99500031-6b713280-2982-11eb-8bb5-63a71af81f75.png)
+
 We added a spawner on the left side of the screean that moves verticaly and spawn astroids, the astroids cant harm the spaceship but can be hit by the spaceship's lazers.
 the code for the creation of the  astroids: https://github.com/MYS-games/assignment-week4/blob/main/Assets/Scripts/2-spawners/TimedShieldsRandom.cs
 the code we changed so the astroids wont harm the spaceship: https://github.com/MYS-games/assignment-week4/blob/main/Assets/Scripts/3-collisions/DestroyOnTrigger2D.cs
